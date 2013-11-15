@@ -41,7 +41,7 @@ class PhotoController extends BController{
 		$sort_id = Yii::app()->request->getQuery('sort_id');
 		$photoSortBehavior = new PhotoSortBehavior();
 		$photo_sort = $photoSortBehavior->getPhotoSort($sort_id);
-		$this->render('grid', compact('photo_sort'));
+		$this->render('list', compact('photo_sort'));
 	}
 
     public function actionRemove(){
