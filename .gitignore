@@ -1,0 +1,9 @@
+#settings
+.settings/
+
+bin/
+gen/
+#idea
+.idea/
+
+statics/upload/

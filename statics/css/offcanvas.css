@@ -1,0 +1,29 @@
+/*
+ * Style twaks
+ * --------------------------------------------------
+ */
+body {
+  padding-top: 70px;
+}
+footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/*.sidebar-nav .nav > .active > a{
+    background-color: #269abc;
+    color: #9E5454;
+    width: 100%;
+    height: 100%;
+}*/
+
+.sidebar-nav .nav > .active > a, .sidebar-nav .nav > .active:hover > a, .sidebar-nav .nav > .active:focus > a {
+    color: #563d7c;
+    background-color: rgba(172, 118, 9, 0.35);
+    border-right: 1px solid #563d7c;
+}
+
+.sidebar-nav .nav > li > a {
+    display: block;
+    color: #716b7a;
+    padding: 5px 20px;
+}

@@ -1,0 +1,40 @@
+/* 图片列表
+	------------------------------ */
+.g-toolbar .check-all{float:left;margin-top:11px;padding:0;width:13px;height:13px;}
+.mod-picList{zoom:1}
+.mod-picList th{border-top:0!important}
+.mod-picList .wd0{width:15px;+width:10px;padding:0;border-left:0}
+.mod-picList .ckb{width:25px;text-align:center}
+.mod-picList table{width:100%;table-layout:fixed}
+.mod-picList .back .ico-back{margin-right:6px}
+
+.mod-picList .piclist{zoom:1;overflow:hidden;padding-bottom:15px;}
+.mod-picList .item{float:left;display:inline;height:230px;width:172px;margin:15px 30px 0 0;overflow:hidden;word-break:break-all;word-wrap:break-word}
+.mod-picList .item-photo{height:165px;width:160px;}
+.mod-picList .txt-link{display:none;}
+.mod-picList .over .txt-link{display:block;}
+.mod-picList .chked{}
+.mod-picList .name{color:#7d7d7d;text-decoration:none;}
+.mod-picList .num{color:#7d7d7d;}
+.mod-picList .checkbox{float:left;margin-right:5px;text-align:center;display:inline;}
+.mod-picList .checkbox .ipt-c{float:left;margin:0;width:13px;height:13px;}
+.mod-picList .cont{zoom:1;float:left;position:relative}
+.mod-picList .wrap1{float:left;background:url(http://r.ph.126.net/photo/image/s1.png) no-repeat scroll right bottom;}
+.mod-picList .wrap2{float:left;background:url(http://r.ph.126.net/photo/image/s2.png) no-repeat scroll right top;}
+.mod-picList .wrap3{float:left;background:url(http://r.ph.126.net/photo/image/s3.png) no-repeat scroll left bottom;padding: 0 6px 6px 0;}
+
+.mod-picList .pic{float:left;}
+.mod-picList .pic img{display:block;}
+.mod-picList .folder{float:left;background:#FFFFFF url(http://r.ph.126.net/photo/image/email/bg-album.png) no-repeat 0 0;padding: 4px 8px 8px 4px;margin-bottom:5px}
+.mod-picList .folder img{display:block;border:0;width:160px;height:160px;overflow:hidden;}
+
+.mod-picList .info{clear:both;line-height:18px}
+.mod-picList .nofile{height:120px;line-height:120px;background:#ffffe1;text-align:center}
+
+.mod-picList .ico-drag{float:left;margin-right:5px}
+
+ul.info, ul.info li{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
