@@ -68,6 +68,9 @@ config/main.php 修改 urlManager
 #git init //初始化
 #git add .
 #git commit -m "zc"
-#git remote add origin git@github.com:Supermanzc/phpserver.git
+#git remote add origin git@github.com:Supermanzc/phpserver.git  //这个是与github建立连接
+#git pull origin master //从github pull下来
+#git push -u origin master //从github push 下来
+
 
 
