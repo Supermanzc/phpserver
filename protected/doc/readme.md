@@ -64,4 +64,10 @@ config/main.php 修改 urlManager
 		url:/images/$hash_w-300_h-300.jpg	//等比缩放，空白部分填补白色。
 		url:/images/$hash_h-300_h-300_c.jpg //等比缩放，图片从中间切出。
 
+3.关于git的上传到github的使用技巧
+#git init //初始化
+#git add .
+#git commit -m "zc"
+#git remote add origin git@github.com:Supermanzc/phpserver.git
+
 
