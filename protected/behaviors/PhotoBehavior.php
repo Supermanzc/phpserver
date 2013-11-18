@@ -34,7 +34,7 @@ class PhotoBehavior{
     public function getPhoto($id){
         $criteria = new CDbCriteria();
         $criteria->addColumnCondition(array('id'=>$id));
-        return Photo::model()->find($id);
+        return Photo::model()->find($criteria);
     }
 
     public function getPhotos($pageSize = 12){
