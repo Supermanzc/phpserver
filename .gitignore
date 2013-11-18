@@ -8,4 +8,7 @@ gen/
 
 statics/upload/
 
-protected/runtime/
+#runtime
+/protected/runtime/*
+/protected/runtime/cache/*
+/statics/upload/*
