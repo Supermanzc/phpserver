@@ -402,3 +402,14 @@ Stack trace:
 #9 {main}
 REQUEST_URI=/test/property
 ---
+2013/11/19 17:12:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message '系统无法找到请求的 "signin.css" 动作.' in D:\wamp\www\framework\web\CController.php:483
+Stack trace:
+#0 D:\wamp\www\framework\web\CController.php(270): CController->missingAction('signin.css')
+#1 D:\wamp\www\framework\web\CWebApplication.php(282): CController->run('signin.css')
+#2 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/manager/s...')
+#3 D:\wamp\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 D:\wamp\www\phpserver\index.php(9): CApplication->run()
+#5 {main}
+REQUEST_URI=/admin/manager/signin.css
+HTTP_REFERER=http://phpserver/admin/manager/login
+---
