@@ -17,7 +17,6 @@ class AdminController extends BController{
         $adminBehavior = new AdminBehavior();
         $roleBehavior = new RoleBehavior();
         $params = Yii::app()->request->getPost('admin');
-        print_r($params);
         if(!empty($params)){
             if(!empty($params['email']) && !empty($params['password'])){
                 $res = $adminBehavior->saveOrUpdate($params);
