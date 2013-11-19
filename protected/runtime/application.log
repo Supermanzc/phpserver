@@ -413,3 +413,18 @@ Stack trace:
 REQUEST_URI=/admin/manager/signin.css
 HTTP_REFERER=http://phpserver/admin/manager/login
 ---
+2013/11/19 17:18:21 [error] [php] imagecreatefromjpeg(): gd-jpeg: JPEG library reports unrecoverable error:  (D:\wamp\www\phpserver\protected\components\FilesComponent.php:281)
+Stack trace:
+#0 D:\wamp\www\phpserver\protected\controllers\FilesController.php(57): FilesComponent->renderImage()
+#1 D:\wamp\www\framework\web\actions\CInlineAction.php(49): FilesController->actionImage()
+#2 D:\wamp\www\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\wamp\www\framework\web\CController.php(286): FilesController->runAction()
+#4 D:\wamp\www\framework\web\CController.php(265): FilesController->runActionWithFilters()
+#5 D:\wamp\www\framework\web\CWebApplication.php(282): FilesController->run()
+#6 D:\wamp\www\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 D:\wamp\www\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#8 D:\wamp\www\phpserver\index.php(9): CWebApplication->run()
+REQUEST_URI=/images/86f06e9b282c9842cf40183464977df1_w-120_h-120_c.jpg
+in D:\wamp\www\phpserver\protected\components\FilesComponent.php (281)
+in D:\wamp\www\phpserver\protected\components\FilesComponent.php (436)
+in D:\wamp\www\phpserver\protected\controllers\FilesController.php (57)
