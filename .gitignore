@@ -9,7 +9,10 @@ gen/
 statics/upload/
 protected/runtime/
 
+assets/
+
 #runtime
 /protected/runtime/*
 /protected/runtime/cache/*
 /statics/upload/*
+

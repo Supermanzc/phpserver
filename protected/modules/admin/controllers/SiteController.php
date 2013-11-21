@@ -16,6 +16,10 @@ class SiteController extends BController{
     }
 
     public function actionError(){
-        $this->render('error');
+		if($error = Yii::app()->errorHandler->error){
+			if(!Yii::app()->request->isAjaxRequest){
+				$this->renderPartial('error');
+			}
+		}
     }
 }

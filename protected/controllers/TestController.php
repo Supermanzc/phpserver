@@ -10,7 +10,8 @@ class TestController extends CController{
 
 	public function actions(){
 		return array(
-			'property' => 'application.controllers.test.PropertyAction'
+			'property' => 'application.controllers.test.PropertyAction',
+			'download' => 'application.controllers.test.DownloadAction',
 		);
 	}
 }

@@ -13,6 +13,8 @@ class PropertyAction extends CAction{
 
 		/*$my_class->read = '只能读取，不能写入';
 		echo $my_class->write; '只能写入，不能读取';*/
+
+
 		
 	}
 }

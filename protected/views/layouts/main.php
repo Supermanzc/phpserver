@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <div><a href="#">呵呵</a></div>
+    <div></div>
 	<?php echo $content; ?>
 </body>
 </html>
