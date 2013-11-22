@@ -8,6 +8,7 @@ gen/
 
 statics/upload/
 protected/runtime/
+protected/vendors/
 
 assets/
 
