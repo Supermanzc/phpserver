@@ -12,7 +12,7 @@ class BController extends CController{
         $this->action_id = Yii::app()->controller->action->id;
         $this->controller_id = Yii::app()->controller->id;
         $this->url = '/admin/' . $this->controller_id . '/' . $this->action_id;
-        $this->checkLogin();
+        //$this->checkLogin();
         return  true;
     }
 

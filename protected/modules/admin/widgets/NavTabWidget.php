@@ -32,6 +32,6 @@ class NavTabWidget extends CWidget{
 
         $menus = $full_menu[$this->index];
         $current_menu = '/admin/'.$this->controller->id.'/'.$this->controller->action->id;
-        $this->render("navtab", compact('menus', 'current_menu'));
+        $this->render("navTab", compact('menus', 'current_menu'));
     }
 }

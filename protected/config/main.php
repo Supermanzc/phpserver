@@ -54,7 +54,7 @@ return array(
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=recollect',
 			'emulatePrepare' => true,
-			'username' => 'recollect',
+			'username' => 'root',
 			'password' => '123456',
 			'charset' => 'utf8',
             'tablePrefix' => '',

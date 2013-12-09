@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="form-group">
-        <label for="inputEmail1" class="col-lg-2 control-label">角色说明</label>
+        <label for="inputEmail1" class="col-lg-2 control-label">角色权限</label>
         <div class="col-lg-10">
             <?php if(!empty($rules)) {?>
             <?php foreach($rules as $key=>$val) { ?>
