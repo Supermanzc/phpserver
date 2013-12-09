@@ -72,5 +72,6 @@ config/main.php 修改 urlManager
 #git pull origin master //从github pull下来
 #git push -u origin master //从github push 下来
 
+4.lianjie
 
 
