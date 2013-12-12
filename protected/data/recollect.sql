@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- 主机: localhost
--- 生成日期: 2013 年 12 月 09 日 18:07
+-- 生成日期: 2013 年 12 月 12 日 11:12
 -- 服务器版本: 5.5.32
 -- PHP 版本: 5.3.10-1ubuntu3.8
 
@@ -32,11 +32,20 @@ CREATE TABLE IF NOT EXISTS `admin` (
   `email` varchar(32) NOT NULL,
   `password` varchar(32) NOT NULL,
   `role_id` int(11) DEFAULT NULL,
+  `status` tinyint(2) DEFAULT '1' COMMENT '2表示被管理员禁用',
   `ctime` int(10) DEFAULT NULL,
   `mtime` int(10) DEFAULT NULL,
+  `ltime` int(10) DEFAULT NULL COMMENT '登陆时间',
   `is_deleted` tinyint(2) DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='管理员表' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='管理员表' AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `email`, `password`, `role_id`, `status`, `ctime`, `mtime`, `ltime`, `is_deleted`) VALUES
+(1, 'admin', 'zc@qq.com', 'e10adc3949ba59abbe56e057f20f883e', 1, 2, 1386815413, 1386817922, 1386817922, 0);
 
 -- --------------------------------------------------------
 
@@ -102,7 +111,14 @@ CREATE TABLE IF NOT EXISTS `system_role` (
   `mtime` int(10) NOT NULL,
   `is_deleted` tinyint(2) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='角色表' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='角色表' AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `system_role`
+--
+
+INSERT INTO `system_role` (`id`, `role_name`, `role_desc`, `rule_ids`, `ctime`, `mtime`, `is_deleted`) VALUES
+(1, 'admin', '管理员', '["1","2"]', 1386815289, 1386815856, 0);
 
 -- --------------------------------------------------------
 
@@ -120,7 +136,15 @@ CREATE TABLE IF NOT EXISTS `system_rule` (
   `mtime` int(10) DEFAULT NULL,
   `is_deleted` tinyint(2) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='权限表' AUTO_INCREMENT=1 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COMMENT='权限表' AUTO_INCREMENT=3 ;
+
+--
+-- 转存表中的数据 `system_rule`
+--
+
+INSERT INTO `system_rule` (`id`, `rule_name`, `rule_desc`, `controller_id`, `action_id`, `ctime`, `mtime`, `is_deleted`) VALUES
+(1, '权限列表', '权限列表', 'rule', 'index', 1386815245, 1386815245, 0),
+(2, '权限修改', '权限修改', 'rule', 'edit', 1386815276, 1386815863, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -23,7 +23,7 @@ class AdminBehavior extends CActiveRecordBehavior{
         return $admin->save();
     }
 
-    public function getAdmin($id){
+    public function getAdminById($id){
         $criteria = new CDbCriteria();
         $criteria->addColumnCondition(array('id'=>$id));
         return Admin::model()->find($criteria);
@@ -83,5 +83,20 @@ class AdminBehavior extends CActiveRecordBehavior{
 		$res = $this->saveOrUpdate($params);
 		return $res;
 	}
+
+    public function setStatus($id){
+        $admin = $this->getAdminById($id);
+        if(!empty($admin)){
+            switch ($admin->status) {
+                case 1:
+                    $admin->status = 2;
+                    break;
+                default:
+                    $admin->status = 1;
+                    break;
+            }
+            return $admin->save();
+        }
+    }
 
 }

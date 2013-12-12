@@ -47,7 +47,7 @@ class AdminController extends BController{
             }
             $this->showAlert('warning', '请输入邮箱和密码等信息', '/admin/admin/edit/id/' . $params['id']);
         }
-        $admin = $adminBehavior->getAdmin($id);
+        $admin = $adminBehavior->getAdminById($id);
         $roles = $roleBehavior->getRoleAll();
         $this->render('edit', compact('roles', 'admin'));
     }
@@ -61,6 +61,13 @@ class AdminController extends BController{
         }else{
             $this->showAlert('error', '服务器繁忙,稍后重试');
         }
+        $this->redirect('/admin/admin/index');
+    }
+
+    public function actionSite(){
+        $adminBehavior = new AdminBehavior();
+        $id = Yii::app()->request->getQuery('id');
+        $res = $adminBehavior->setStatus($id);
         $this->redirect('/admin/admin/index');
     }
 }
