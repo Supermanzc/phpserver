@@ -16,7 +16,7 @@
                         <li><a href="/admin/manager/logout">登出</a></li>
                         <li><a href="/admin/manager/edit/id/<?php echo (Yii::app()->user->hasState('id'))?Yii::app()->user->getState('id'):'' ?>">修改密码</a></li>
                         <li class="divider"></li>
-                        <li><a href="#"><?php echo (Yii::app()->user->hasState('username'))?Yii::app()->user->getState('username'):'' ?></a></li>
+                        <li><a href="#"><?php echo Yii::app()->user->name?></a></li>
                     </ul>
                 </li>
             </ul>
