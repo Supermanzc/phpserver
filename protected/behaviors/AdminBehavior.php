@@ -35,6 +35,15 @@ class AdminBehavior extends CActiveRecordBehavior{
         return Admin::model()->find($criteria);
     }
 
+    /**
+     *  通过email查询用户
+     */
+    public function getUserToAdmin($email){
+        //$admin_user = Admin::model()->find('LOWER(email)=?', array($email));
+        $admin_user = Admin::model()->findByAttributes(array('email'=>$email));
+        return $admin_user;
+    }
+
     public function getAdmins($pageSize = 12){
         $criteria = new CDbCriteria();
         $criteria->order = 'id asc';

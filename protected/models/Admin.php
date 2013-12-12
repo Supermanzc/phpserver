@@ -31,4 +31,12 @@ class Admin extends CActiveRecord{
     public function relations(){
         return array();
     }
+
+    public function validatePassword($password){
+        return $this->hashPassword($password) === $this->password;
+    }
+
+    public function hashPassword($password){
+        return md5($password);
+    }
 }
