@@ -9,11 +9,12 @@ gen/
 statics/upload/
 protected/runtime/
 protected/vendors/
+protected/runtime/application.log
 
 assets/
 
 #runtime
-/protected/runtime/*
-/protected/runtime/cache/*
-/statics/upload/*
+protected/runtime/*
+protected/runtime/cache/*
+statics/upload/*
 
