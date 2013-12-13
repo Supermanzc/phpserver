@@ -1,1 +1,1 @@
-<font color="#8fbc8f"> 欢迎光临本系统</font>
+<font color="#8fbc8f"><?php echo Yii::app()->user->name?> 欢迎光临本系统</font>

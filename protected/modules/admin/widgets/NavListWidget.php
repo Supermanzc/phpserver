@@ -30,9 +30,9 @@ class NavListWidget extends CWidget{
         $menus['role'][] = array('角色列表', '/admin/role/index');
         $menus['role'][] = array('角色添加', '/admin/role/add');
 
-        $category['rule'] = '角色权限管理';
-        $menus['rule'][] = array('角色权限列表', '/admin/rule/index');
-        $menus['rule'][] = array('角色权限添加', '/admin/rule/add');
+        $category['rule'] = '权限管理';
+        $menus['rule'][] = array('权限列表', '/admin/rule/index');
+        $menus['rule'][] = array('权限添加', '/admin/rule/add');
 
         $category['admin'] = '管理员管理';
         $menus['admin'][] = array('管理员列表', '/admin/admin/index');

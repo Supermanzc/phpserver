@@ -7,7 +7,7 @@ gen/
 .idea/
 
 statics/upload/
-protected/runtime/
+protected/runtime/*
 protected/vendors/
 protected/runtime/application.log
 

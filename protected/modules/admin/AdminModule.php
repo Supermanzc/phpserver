@@ -15,5 +15,11 @@ class AdminModule extends CWebModule{
             array(
                 'admin.components.*'
             ));
+        $this->setComponents(
+        	array(	
+                'errorHandler'=>array(
+					'errorAction'=>'site/error',
+					),
+        	));
     }
 }

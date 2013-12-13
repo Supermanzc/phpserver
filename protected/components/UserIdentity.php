@@ -14,21 +14,26 @@ class UserIdentity extends CUserIdentity
 	 * In practical applications, this should be changed to authenticate
 	 * against some persistent user identity storage (e.g. database).
 	 * @return boolean whether authentication succeeds.
+	 * $user['password']!==md5($this->password)
 	 */
+	
+	private $_id;
 
 	public function authenticate()
 	{
         $adminBehavior = new AdminBehavior();
-        $user = $adminBehavior->getAdminEmail($this->username);
-		if(!isset($user['email']))
+        $user = $adminBehavior->getUserToAdmin($this->username);
+        //var_dump($user); die();
+		if($user === null)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($user['password']!==md5($this->password))
+		elseif(!$user->validatePassword($this->password))
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
 		else{
-            $user = $user->attributes;
+            $this->_id = $user->id;
+            $this->username=$user->username;
             Yii::app()->session['user'] = $user;
-            Yii::app()->user->setState('username', $user['username']);
-            Yii::app()->user->setState('id', $user['id']);
+            /*Yii::app()->user->setState('username', $user['username']);
+            Yii::app()->user->setState('id', $user['id']);*/
 			//修改登录时间
 			$res = $adminBehavior->updateLoginTime($user['id']);
 			if(!$res){
@@ -37,5 +42,9 @@ class UserIdentity extends CUserIdentity
 			$this->errorCode=self::ERROR_NONE;
         }
 		return !$this->errorCode;
+	}
+
+	public function getId(){
+		return $this->_id;
 	}
 }

@@ -51,8 +51,6 @@ class PhotoController extends BController{
 	    if(!empty($ids)){
 			foreach($ids as $key=>$val){
 				$res = $photoBehavior->remove($val);
-				/*print_r($res);
-				die();*/
 			}
 		    $this->showAlert('success', '删除成功');
 	    }else{

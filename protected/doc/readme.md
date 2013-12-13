@@ -72,5 +72,43 @@ config/main.php 修改 urlManager
 #git pull origin master //从github pull下来
 #git push -u origin master //从github push 下来
 
+4.公有权限
+1).manager 	//后台用户登陆
+login	用户登陆
+logout	用户登出
+edit	修改密码
 
 
+5.私有权限
+1).admin	//后台用户管理
+index	用户列表
+add 	用户添加
+edit	用户修改
+remove	用户删除
+
+
+2).photosort	//图片分类管理
+index	图片分类列表
+add 	图片分类添加
+edit	图片分类修改
+remove	图片分类删除
+
+3).photo 	//图片管理
+index	图片分类列表
+add 	图片添加
+list	分类图片下列表
+remove	图片删除
+
+4).rule 	//权限管理
+index	权限列表
+add 	权限添加
+edit	权限修改
+remove	权限删除
+
+5.role 		//角色管理
+index	角色列表
+add 	角色添加
+edit	角色修改
+remove	角色删除
+
+6.
